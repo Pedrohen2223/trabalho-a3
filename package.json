@@ -1,0 +1,18 @@
+{
+  "name": "controle-vacinacap-api",
+  "version": "1.0.0",
+  "description": "API RESTful para controle de vacinação de pets e tutores",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

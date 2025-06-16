@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "Controle Vacina\u00e7\u00e3o API",
+    "_postman_id": "a3-api-pets-tutores",
+    "description": "Collection para testar a API de controle de vacina\u00e7\u00e3o de pets",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tutores",
+      "item": [
+        {
+          "name": "Listar Tutores",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/tutores"
+          }
+        },
+        {
+          "name": "Criar Tutor",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/tutores",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nome\": \"Jo\u00e3o Silva\", \"email\": \"joao@email.com\"}"
+            }
+          }
+        },
+        {
+          "name": "Atualizar Tutor",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/tutores/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nome\": \"Jo\u00e3o Atualizado\", \"email\": \"joao@email.com\"}"
+            }
+          }
+        },
+        {
+          "name": "Atualiza\u00e7\u00e3o Parcial Tutor",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base_url}}/tutores/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nome\": \"Jo\u00e3o PATCH\"}"
+            }
+          }
+        },
+        {
+          "name": "Excluir Tutor",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/tutores/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pets",
+      "item": [
+        {
+          "name": "Listar Pets",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/pets"
+          }
+        },
+        {
+          "name": "Criar Pet",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/pets",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nome\": \"Rex\", \"especie\": \"Cachorro\", \"raca\": \"Labrador\", \"nascimento\": \"2020-01-01\", \"TutorId\": 1}"
+            }
+          }
+        },
+        {
+          "name": "Atualizar Pet",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/pets/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nome\": \"Rex Atualizado\", \"especie\": \"Cachorro\", \"TutorId\": 1}"
+            }
+          }
+        },
+        {
+          "name": "Atualiza\u00e7\u00e3o Parcial Pet",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base_url}}/pets/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"raca\": \"Golden\"}"
+            }
+          }
+        },
+        {
+          "name": "Excluir Pet",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/pets/1"
+          }
+        }
+      ]
+    }
+  ]
+}
